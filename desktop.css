@@ -1,0 +1,168 @@
+/* Set a default font size and font family */
+html, body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Use a two-column grid layout */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* left column takes up 1/4 of the space */
+    height: 100vh;
+  }
+  
+  /* Style the sidebar (left column) */
+  .sidebar {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    overflow-y: scroll;
+  }
+  
+  /* Style the main section (right column) */
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-left: 1px solid #e6e6e6;
+  }
+  
+  /* Style the chat header */
+  .header {
+    background-color: #fff;
+    padding: 1rem;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  /* Style the chat messages */
+  .messages {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 1rem;
+  }
+  
+  /* Style the input container */
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.5rem;
+  }
+  
+  /* Style the input field */
+  .input-container input[type="text"] {
+    flex: 1;
+    margin-right: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+  }
+  
+  /* Style the send button */
+  .input-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #128C7E;
+    color: #fff;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-left h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 22px;
+    margin-right: 16px;
+  }
+
+  .header-right {
+    display: flex;
+  }
+  
+  .header-right .material-icons {
+    font-size: 24px;
+    margin-left: 16px;
+    color: #fff;
+  }
+
+  .header-left img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr; /* switch to a single column layout */
+    }
+    .sidebar {
+      height: 30vh;
+      overflow-y: scroll;
+    }
+    .main {
+      border-left: none;
+    }
+  }
+
+  .tab-navigation button.active {
+
+    border-bottom: 2px solid #fff;
+  }
+  
+  .chat-list {
+    padding: 16px;
+  }
+  
+  .chat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .chat-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .chat-details {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-details h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .chat-details p, .chat-details span {
+    margin: 0;
+    font-size: 16px;
+    color: #B1B3B5;
+  }
+  
+  .chat-details p {
+    margin-top: 4px;
+  }
+  
+  .chat-details span {
+    margin-left: auto;
+  }
+
+  

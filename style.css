@@ -86,13 +86,16 @@
   }
   
   .chat-list {
-    padding: 16px;
+    /* padding: 1.6rem; */
+    padding-left:;
   }
   
   .chat-item {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .chat-item img {
@@ -100,6 +103,7 @@
     height: 50px;
     border-radius: 50%;
     margin-right: 16px;
+    margin-left: 0;
   }
   
   .chat-details {
@@ -153,4 +157,3 @@
     outline: none;
     box-shadow: 0 0 0 2px rgba(18, 140, 126, 0.5);
   }
-  
