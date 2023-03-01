@@ -86,8 +86,7 @@
   }
   
   .chat-list {
-    /* padding: 1.6rem; */
-    padding-left:;
+    padding: 16px;
   }
   
   .chat-item {
