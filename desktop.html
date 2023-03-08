@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-H/1MWp+Njd6/5xJjCQ2UJPkFqN1Nl5W5U5PQo/w3qy3vveRX0+zvkzBkR16i9XZ0nyvD/zPdc/j8gT72TbT/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/81435cdecd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/81435cdecd.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-t5gxGVr5oR8v62ZnBPmfpnKWa+jQxW8u3qX1YpxY/WKjtpHwZweTK3qJ3f+4d4Sa4ecL/ttRvJt9IdbKs+MG0w==" crossorigin="anonymous" />
+
 </head>
 <body>
     <div class="container">
@@ -18,16 +23,18 @@
                     <img src="/me.jpg" alt="User Profile">
                 </div>
                 <div class="header-right">
-                  <i class="material-icons">chat</i>
-                  
-                  <i class="material-icons">more_vert</i>
+                  <a href="#" class="links"><i class="fas fa-users icon"></i></a>
+                  <a href="#" class="links"><i class="material-icons icon">chat</i></a>
+                  <a href="#" class="links"><i class="material-icons icon">more_vert</i></a>
                 </div>
             </header>
             <div class="chat-list-header">
                 <div class="search-field">
-                  <i class="material-icons">search</i>
+                  <a href=""><i class="material-icons icon">search</i></a>
                   <input type="text" placeholder="Search or start a new chat">
                 </div>
+                <div><i class="material-icons icon">filter</i></div>
+                
             </div>
             <section class="chat">
             <div class="chat-list">
@@ -50,7 +57,7 @@
                 <div class="chat-item">
                   <img src="/mem5.jpeg" alt="Profile Picture" />
                   <div class="chat-details">
-                    <h3>Chidinma</h3>
+                    <h3>Moyo</h3>
                     <p>Hey there!, I am using whatsApp</p>
                     <span>Yesterday</span>
                   </div>
@@ -66,38 +73,43 @@
                 <div class="chat-item">
                     <img src="/mem3.jpeg" alt="Profile Picture" />
                     <div class="chat-details">
-                      <h3>Ronald</h3>
+                      <h3>Wisdom</h3>
                       <p>Hey there!, I am using whatsApp</p>
-                      <span>Yesterday</span>
+                      <span>4:40pm</span>
                     </div>
                   </div>
                   <div class="chat-item">
                     <img src="/mem3.jpeg" alt="Profile Picture" />
                     <div class="chat-details">
-                      <h3>Ronald</h3>
+                      <h3>Caleb</h3>
                       <p>Hey there!, I am using whatsApp</p>
-                      <span>Yesterday</span>
+                      <span>3:45am</span>
                     </div>
                   </div>
                   <div class="chat-item">
                     <img src="/mem3.jpeg" alt="Profile Picture" />
                     <div class="chat-details">
-                      <h3>Ronald</h3>
+                      <h3>Ridwan</h3>
                       <p>Hey there!, I am using whatsApp</p>
-                      <span>Yesterday</span>
+                      <span>11:30pm</span>
                     </div>
                   </div>
-            
               </div>
             </section>
         </div>
         <div class="main">
           <div class="header-main">
             <div class="chat-item">
-                <img src="/mem5.jpeg" alt="Profile Picture" />
+                <a href="#" class="links"><img src="/mem5.jpeg" alt="Profile Picture" /></a>
                 <div class="chat-details">
-                  <h3>Chidinma</h3>
+                  <a href="#" class="links"><h3>Moyo</h3>
                   <span>typing...</span>
+                </a>
+                </div>
+                <div class="header-right">
+                    <a href="#" class="links"><i class="material-icons">search</i></a>
+                    <a href="#" class="links"><i class="material-icons">more_vert</i></a>
+                    
                 </div>
               </div>
           </div>
@@ -127,11 +139,26 @@
               </div>
               
           </div>
-          <div class="input-container">
-            <input type="text" placeholder="Type a message...">
-            <button>Send</button>
-          </div>
+          <div class="chat-list-header message-input">
+            <div>
+                <a href="#" class="links">
+                  <i class="fa-regular fa-face-smile icon"></i>
+                </a>
+                <a href="#" class="links">
+                  <i class="fa-solid fa-paperclip icon"></i>
+                </a>
+            </div>
+            <div class="search-field">
+              <input type="text" placeholder="Type a message">
+            </div>
+            <div>
+              <a href="#" class="links">
+                <i class="fas fa-microphone icon"></i>
+              </a>
+            </div>
+            
         </div>
+      </div>
       </div>
       
 </body>
