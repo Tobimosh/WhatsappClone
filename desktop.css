@@ -80,7 +80,8 @@ html, body {
   .header-left {
     display: flex;
     align-items: center;
-    height: 1.2rem; 
+    height: 1.2rem;
+    cursor: pointer; 
   }
   .header-right {
     display: flex;
@@ -141,6 +142,7 @@ html, body {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    cursor: pointer;
   }
   .chat-item img {
     width: 50px;
@@ -192,9 +194,11 @@ html, body {
   }
   .received {
     align-items: flex-start;
+    justify-content: flex-start;
   }
   .sent {
     align-items: flex-end;
+    justify-content: flex-end;
   }
   .avatar {
     width: 30px;
@@ -279,10 +283,25 @@ html, body {
     border: none;
     background-color: transparent;
     font-size: 20px;
-    color: #007bff;
+    color: grey;
     cursor: pointer;
     margin-left: 10px;
   }
+
+  .send-button i {
+    color: grey;
+    font-size: 20px;
+  }
+  
+  .send-button.active i {
+    color: grey;
+    font-size: 20px;
+  }
+  
+  .send-button.active:hover {
+    cursor: pointer;
+  }
+  
 
   .links{
     text-decoration: none;
@@ -294,4 +313,23 @@ html, body {
     color: grey;
       padding: 0 0.2rem 0 0.2rem;
       font-size: 1.2rem;
+  }
+
+.dateContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Date{
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #797575;
+  height: 2rem;
+  border-radius: 0.7rem;
+  margin: 40px 0 ;
+  background-color: rgb(218, 218, 218);
+  margin-bottom: 0;
   }

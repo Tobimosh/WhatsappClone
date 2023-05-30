@@ -1,165 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desktop Clone</title>
-    <link rel="stylesheet" href="/desktop.css">
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-H/1MWp+Njd6/5xJjCQ2UJPkFqN1Nl5W5U5PQo/w3qy3vveRX0+zvkzBkR16i9XZ0nyvD/zPdc/j8gT72TbT/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/81435cdecd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://kit.fontawesome.com/81435cdecd.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-t5gxGVr5oR8v62ZnBPmfpnKWa+jQxW8u3qX1YpxY/WKjtpHwZweTK3qJ3f+4d4Sa4ecL/ttRvJt9IdbKs+MG0w==" crossorigin="anonymous" />
-
-</head>
-<body>
+    <link rel="stylesheet" href="/desktop.css" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-H/1MWp+Njd6/5xJjCQ2UJPkFqN1Nl5W5U5PQo/w3qy3vveRX0+zvkzBkR16i9XZ0nyvD/zPdc/j8gT72TbT/w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/81435cdecd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/81435cdecd.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-t5gxGVr5oR8v62ZnBPmfpnKWa+jQxW8u3qX1YpxY/WKjtpHwZweTK3qJ3f+4d4Sa4ecL/ttRvJt9IdbKs+MG0w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="sidebar">
-            <header>
-                <div class="header-left">
-                    <img src="/me.jpg" alt="User Profile">
-                </div>
-                <div class="header-right">
-                  <a href="#" class="links"><i class="fas fa-users icon"></i></a>
-                  <a href="#" class="links"><i class="material-icons icon">chat</i></a>
-                  <a href="#" class="links"><i class="material-icons icon">more_vert</i></a>
-                </div>
-            </header>
-            <div class="chat-list-header">
-                <div class="search-field">
-                  <a href=""><i class="material-icons icon">search</i></a>
-                  <input type="text" placeholder="Search or start a new chat">
-                </div>
-                <div><i class="material-icons icon">filter</i></div>
-            
-            </div>
-            <section class="chat">
-            <div class="chat-list">
-                <div class="chat-item">
-                  <img src="/mem6.jpeg" alt="Profile Picture" />
-                  <div class="chat-details">
-                    <h3>Bola</h3>
-                    <p>Hey there!, I am using whatsApp</p>
-                    <span>10:30 AM</span>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <img src="/mem4.jpeg" alt="Profile Picture"/>
-                  <div class="chat-details">
-                    <h3>Banjo</h3>
-                    <p>Hey there!, I am using whatsApp</p>
-                    <span>Yesterday</span>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <img src="/mem5.jpeg" alt="Profile Picture" />
-                  <div class="chat-details">
-                    <h3>Moyo</h3>
-                    <p>Hey there!, I am using whatsApp</p>
-                    <span>Yesterday</span>
-                  </div>
-                </div>
-                <div class="chat-item">
-                  <img src="/mem3.jpeg" alt="Profile Picture" />
-                  <div class="chat-details">
-                    <h3>Ronald</h3>
-                    <p>Hey there!, I am using whatsApp</p>
-                    <span>Yesterday</span>
-                  </div>
-                </div>
-                <div class="chat-item">
-                    <img src="/mem3.jpeg" alt="Profile Picture" />
-                    <div class="chat-details">
-                      <h3>Wisdom</h3>
-                      <p>Hey there!, I am using whatsApp</p>
-                      <span>4:40pm</span>
-                    </div>
-                  </div>
-                  <div class="chat-item">
-                    <img src="/mem3.jpeg" alt="Profile Picture" />
-                    <div class="chat-details">
-                      <h3>Caleb</h3>
-                      <p>Hey there!, I am using whatsApp</p>
-                      <span>3:45am</span>
-                    </div>
-                  </div>
-                  <div class="chat-item">
-                    <img src="/mem3.jpeg" alt="Profile Picture" />
-                    <div class="chat-details">
-                      <h3>Ridwan</h3>
-                      <p>Hey there!, I am using whatsApp</p>
-                      <span>11:30pm</span>
-                    </div>
-                  </div>
-              </div>
-            </section>
+      <div class="sidebar">
+        <header>
+          <div class="header-left">
+            <img src="/me.jpg" alt="User Profile" />
+          </div>
+          <div class="header-right">
+            <a href="#" class="links"><i class="fas fa-users icon"></i></a>
+            <a href="#" class="links"
+              ><i class="material-icons icon">chat</i></a
+            >
+            <a href="#" class="links"
+              ><i class="material-icons icon">more_vert</i></a
+            >
+          </div>
+        </header>
+        <div class="chat-list-header">
+          <div class="search-field">
+            <a href=""><i class="material-icons icon">search</i></a>
+            <input type="text" placeholder="Search or start a new chat" />
+          </div>
+          <div><i class="material-icons icon">filter</i></div>
         </div>
-        <div class="main">
-          <div class="header-main">
+        <section class="chat">
+          <div class="chat-list">
+            
             <div class="chat-item">
-                <a href="#" class="links"><img src="/mem5.jpeg" alt="Profile Picture" /></a>
-                <div class="chat-details">
-                  <a href="#" class="links"><h3>Moyo</h3>
-                  <span>typing...</span>
-                </a>
-                </div>
-                <div class="header-right">
-                    <a href="#" class="links"><i class="material-icons">search</i></a>
-                    <a href="#" class="links"><i class="material-icons">more_vert</i></a>
-                    
-                </div>
+              <img src="/mem6.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Bola</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>10:30 AM</span>
               </div>
-          </div>
-          <div class="messages">
-            <div class="chat-messages">
-                <div class="message received">
-                    <img class="avatar" src="/mem5.jpeg" alt="Profile Picture" />
-                    <div class="text">Hey there! How are you doing?</div>
-                </div>
-                <div class="message sent">
-                  <div class="text">I'm doing great, thanks for asking!</div>
-                </div>
-                <div class="message received">
-                   <img class="avatar" src="/mem5.jpeg" alt="Profile Picture" />
-                  <div class="text">That's good to hear. What have you been up to lately?</div>
-                </div>
-                <div class="message sent">
-                  <div class="text">Not much, just working on some projects.</div>
-                </div>
-                <div class="message received">
-                  <img class="avatar" src="/mem5.jpeg" alt="Profile Picture" />
-                  <div class="text">Cool, let me know if you need any help!</div>
-                </div>
-                <div class="message sent">
-                  <div class="text">Thanks, will do!</div>
-                </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem4.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Banjo</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>Yesterday</span>
               </div>
-              
+            </div>
+            <div class="chat-item">
+              <img src="/mem5.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Moyo</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>Yesterday</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem3.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Ronald</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>Yesterday</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem3.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Wisdom</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>4:40pm</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem3.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Caleb</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>3:45am</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem3.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Ridwan</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>11:30pm</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem6.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Bola</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>10:30 AM</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem6.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Bola</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>10:30 AM</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem6.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Bola</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>10:30 AM</span>
+              </div>
+            </div>
+            <div class="chat-item">
+              <img src="/mem6.jpeg" alt="Profile Picture" />
+              <div class="chat-details">
+                <h3>Bola</h3>
+                <p>Hey there!, I am using whatsApp</p>
+                <span>10:30 AM</span>
+              </div>
+            </div>
           </div>
-          <div class="chat-list-header message-input">
-            <div>
-                <a href="#" class="links">
-                  <i class="fa-regular fa-face-smile icon"></i>
-                </a>
-                <a href="#" class="links">
-                  <i class="fa-solid fa-paperclip icon"></i>
-                </a>
-            </div>
-            <div class="search-field">
-              <input type="text" placeholder="Type a message">
-            </div>
-            <div>
-              <a href="#" class="links">
-                <i class="fas fa-microphone icon"></i>
+        </section>
+      </div>
+      <div class="main">
+        <div class="header-main">
+          <div class="chat-item">
+            <a href="#" class="links"
+              ><img src="/mem5.jpeg" alt="Profile Picture"
+            /></a>
+            <div class="chat-details">
+              <a href="#" class="links"
+                ><h3>Moyo</h3>
+                <span>typing...</span>
               </a>
             </div>
-            
+           
+            <div class="header-right">
+              <a href="#" class="links"><i class="material-icons">search</i></a>
+              <a href="#" class="links"
+                ><i class="material-icons">more_vert</i></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="dateContainer">
+          <div class="Date">Today</div>
+        </div>
+        
+        <div class="messages">
+          <div class="chat-messages" id="chatMessages">
+            <div class="message received">
+              <img class="avatar" src="/mem5.jpeg" alt="Profile Picture" />
+              <div class="text">Hey there! How are you doing?</div>
+            </div>
+            <div class="message sent">
+              <div class="text">I'm doing great, thanks for asking!</div>
+            </div>
+            <div class="message received">
+              <img class="avatar" src="/mem5.jpeg" alt="Profile Picture" />
+              <div class="text">
+                That's good to hear. What have you been up to lately?
+              </div>
+            </div>
+            <div class="message sent">
+              <div class="text">Not much, just working on some projects.</div>
+            </div>
+            <div class="message received">
+              <img class="avatar" src="/mem5.jpeg" alt="Profile Picture" />
+              <div class="text">Cool, let me know if you need any help!</div>
+            </div>
+            <div class="message sent">
+              <div class="text">Thanks, will do!</div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-list-header message-input">
+          <div>
+            <a href="#" class="links">
+              <i class="fa-regular fa-face-smile icon"></i>
+            </a>
+            <a href="#" class="links">
+              <i class="fa-solid fa-paperclip icon"></i>
+            </a>
+          </div>
+          <div class="search-field" class="input-container">
+            <input type="text" placeholder="Type a message" id="messageInput" />
+          </div>
+          <div class="send-button">
+            <a href="#" class="links">
+              <i class="fas fa-microphone icon"></i>
+            </a>
+          </div>
         </div>
       </div>
-      </div>
-      
-</body>
+    </div>
+  </body>
+  <script src="/app.js"></script>
 </html>
