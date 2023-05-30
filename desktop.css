@@ -4,11 +4,13 @@ html, body {
     font-family: Arial, sans-serif;
     /* font-family: 'Font Awesome 5 Free'; */
     overflow: hidden;
+
   }
   .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 100vh;
+    position: relative;
   }
   
   .sidebar {
@@ -23,7 +25,9 @@ html, body {
     flex-direction: column;
     height: 100%;
     border-left: 1px solid #e6e6e6;
-    overflow-y: scroll;
+    overflow-y: scroll; 
+    position: relative;
+    overflow-x: hidden;
   }
   
   .header {
@@ -31,12 +35,20 @@ html, body {
     padding: 1rem;
     border-bottom: 1px solid #e6e6e6;
   }
+
   .messages {
     flex: 1;
     padding: 1rem;
     height: 100%;
+    overflow-y: hidden;
   }
-
+  .chat-messages::-webkit-scrollbar{
+    display: none;
+  }
+  .chat-messages{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   
   .input-container {
     display: flex;
@@ -187,6 +199,7 @@ html, body {
   .chat-messages {
     grid-column: 2 / 3;
     height: 100%;
+    overflow-y: scroll;
   }
   .message {
     display: flex;
@@ -264,11 +277,17 @@ html, body {
   }
   
 
-  .main .message-input{
+ .message-input{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+  
+    
 
   }
   
