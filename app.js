@@ -2,21 +2,21 @@ const messageInput = document.getElementById('messageInput');
 const chatMessages = document.getElementById('chatMessages');
 const sendButton = document.querySelector('.send-button');
 
-function handleInput() {
-    const message = messageInput.value;
-    messageInput.value = '';
-    // Create a new message element
-    const newMessage = document.createElement('div');
-    newMessage.className = 'message sent';
-    newMessage.innerHTML = `<div class="text">${message}</div>`;
-    chatMessages.appendChild(newMessage);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+function sendMessage() {
+  const message = messageInput.value;
+  messageInput.value = '';
+  const newMessage = document.createElement('div');
+  newMessage.className = 'message sent';
+  newMessage.innerHTML = `<div class="text">${message}</div>`;
+  chatMessages.appendChild(newMessage);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }
-  messageInput.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-      handleInput();
-    }
-  });
+
+messageInput.addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+});
 
 messageInput.addEventListener('input', function() {
   if (messageInput.value.trim() !== '') {
@@ -30,12 +30,11 @@ messageInput.addEventListener('input', function() {
 
 sendButton.addEventListener('click', function() {
   if (sendButton.classList.contains('active')) {
-    // Perform the send message action here
-    // You can add your logic or function to send the message
-    // For example: sendMessage(messageInput.value);
+    sendMessage();
     messageInput.value = '';
     sendButton.classList.remove('active');
     sendButton.innerHTML = '<i class="material-icons">mic</i>';
+  } else {
+    sendMessage();
   }
 });
-
