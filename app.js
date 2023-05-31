@@ -5,6 +5,9 @@ const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('search-button');
 const chatItems = document.querySelectorAll('.chat-item');
 const chatDisplay = document.querySelector('.chat-messages');
+const chatHeaderName = document.querySelector('.header-main .chat-details h3');
+const chatHeaderSubtitle = document.querySelector('.header-main .chat-details p');
+const chatHeaderImage = document.querySelector('.header-left img');
 
 
 function sendMessage() {
@@ -84,21 +87,13 @@ function searchContact() {
 
 chatItems.forEach((chatItem) => {
   chatItem.addEventListener('click', () => {
-    // Remove any active class from other chat items
     chatItems.forEach((item) => item.classList.remove('active'));
-
-    // Add active class to the clicked chat item for visual feedback
     chatItem.classList.add('active');
-
-    // Get the chat ID from the clicked chat item
     const chatId = chatItem.dataset.chatId;
-
-    // Update the chat display based on the selected chat item
     updateChatDisplay(chatId);
   });
 });
 
-// Function to update the chat display based on the selected chat item
 function updateChatDisplay(chatId) {
   const messagesContainer = document.querySelector('.chat-messages');
 
@@ -129,5 +124,16 @@ function createMessageElement(message) {
   return messageElement;
 }
 
+
+chatItems.forEach(chatItem => {
+  chatItem.addEventListener('click', () => {
+    const name = chatItem.querySelector('.chat-details h3').textContent;
+    const subtitle = chatItem.querySelector('.chat-details p').textContent;
+    const imageSrc = chatItem.querySelector('img').getAttribute('src');
+    chatHeaderName.textContent = name;
+    chatHeaderSubtitle.textContent = subtitle;
+    chatHeaderImage.setAttribute('src', imageSrc);
+  });
+});
 
 
