@@ -3,6 +3,9 @@ const chatMessages = document.getElementById('chatMessages');
 const sendButton = document.querySelector('.send-button');
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('search-button');
+const chatItems = document.querySelectorAll('.chat-item');
+const chatDisplay = document.querySelector('.chat-messages');
+
 
 function sendMessage() {
   const message = messageInput.value;
@@ -41,6 +44,7 @@ sendButton.addEventListener('click', function() {
   }
 });
 
+
 searchButton.addEventListener('click', searchContact);
 
 searchInput.addEventListener('keypress', function (e) {
@@ -78,11 +82,6 @@ function searchContact() {
   }
 }
 
-// Get the chat items and chat display element
-const chatItems = document.querySelectorAll('.chat-item');
-const chatDisplay = document.querySelector('.chat-messages');
-
-// Add event listeners to chat items
 chatItems.forEach((chatItem) => {
   chatItem.addEventListener('click', () => {
     // Remove any active class from other chat items
@@ -118,7 +117,7 @@ function createMessageElement(message) {
 
   const senderElement = document.createElement('div');
   senderElement.classList.add('sender');
-  
+
   senderElement.textContent = message.sender;
   const contentElement = document.createElement('div');
   contentElement.classList.add('content');
