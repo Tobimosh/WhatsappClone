@@ -49,14 +49,12 @@ html, body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  .icon:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Adjust the color and opacity as needed */
+  /* .icon:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
     border-radius: 20%;
     height: 30px;
     place-items: center;
-
-    /* padding: 5px; */
-  }
+  } */
   
   .input-container {
     display: flex;

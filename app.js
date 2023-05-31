@@ -2,6 +2,7 @@ const messageInput = document.getElementById('messageInput');
 const chatMessages = document.getElementById('chatMessages');
 const sendButton = document.querySelector('.send-button');
 const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('search-button');
 
 function sendMessage() {
   const message = messageInput.value;
@@ -40,25 +41,94 @@ sendButton.addEventListener('click', function() {
   }
 });
 
+searchButton.addEventListener('click', searchContact);
 
-  // Add event listener for the 'input' event
-  searchInput.addEventListener('input', handleSearch);
-  // Function to handle search
-  function handleSearch() {
-    const searchTerm = searchInput.value.toLowerCase(); // Get the search term and convert it to lowercase
-    // Get all the chat item elements
-    const chatItems = document.getElementsByClassName('chat-item');
+searchInput.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    searchContact();
+  }
+});
 
-    // Loop through each chat item and check if the name matches the search term
-    for (let i = 0; i < chatItems.length; i++) {
-      const chatItem = chatItems[i];
-      const chatName = chatItem.getElementsByClassName('chat-details')[0].getElementsByTagName('h3')[0].textContent.toLowerCase();
+function searchContact() {
+  const searchTerm = searchInput.value.trim();
+  const chatList = document.querySelector('.chat-list');
+  const chatItems = chatList.getElementsByClassName('chat-item');
 
-      // If the search term is found in the name, show the chat item; otherwise, hide it
-      if (chatName.includes(searchTerm)) {
-        chatItem.style.display = 'flex';
-      } else {
-        chatItem.style.display = 'none';
-      }
+  let found = false;
+
+  for (let i = 0; i < chatItems.length; i++) {
+    const chatItem = chatItems[i];
+    const name = chatItem.querySelector('.chat-details h3').textContent;
+
+    if (name.toLowerCase().includes(searchTerm.toLowerCase())) {
+      chatItem.style.display = 'flex';
+      found = true;
+    } else {
+      chatItem.style.display = 'none';
     }
   }
+
+  if (!found) {
+    const errorMessage = `You don't have "${searchTerm}" on your chat list.`;
+    alert(errorMessage);
+    searchInput.value = ''; 
+    Array.from(chatItems).forEach((chatItem) => {
+      chatItem.style.display = 'flex';
+    });
+  }
+}
+
+// Get the chat items and chat display element
+const chatItems = document.querySelectorAll('.chat-item');
+const chatDisplay = document.querySelector('.chat-messages');
+
+// Add event listeners to chat items
+chatItems.forEach((chatItem) => {
+  chatItem.addEventListener('click', () => {
+    // Remove any active class from other chat items
+    chatItems.forEach((item) => item.classList.remove('active'));
+
+    // Add active class to the clicked chat item for visual feedback
+    chatItem.classList.add('active');
+
+    // Get the chat ID from the clicked chat item
+    const chatId = chatItem.dataset.chatId;
+
+    // Update the chat display based on the selected chat item
+    updateChatDisplay(chatId);
+  });
+});
+
+// Function to update the chat display based on the selected chat item
+function updateChatDisplay(chatId) {
+  const messagesContainer = document.querySelector('.chat-messages');
+
+  messagesContainer.innerHTML = '';
+  const messages = getChatMessages(chatId);
+
+  messages.forEach((message) => {
+    const messageElement = createMessageElement(message);
+    messagesContainer.appendChild(messageElement);
+  });
+}
+
+function createMessageElement(message) {
+  const messageElement = document.createElement('div');
+  messageElement.classList.add('message');
+
+  const senderElement = document.createElement('div');
+  senderElement.classList.add('sender');
+  
+  senderElement.textContent = message.sender;
+  const contentElement = document.createElement('div');
+  contentElement.classList.add('content');
+  contentElement.textContent = message.content;
+
+  messageElement.appendChild(senderElement);
+  messageElement.appendChild(contentElement);
+
+  return messageElement;
+}
+
+
+
